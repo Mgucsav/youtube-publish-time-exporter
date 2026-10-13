@@ -1,0 +1,22 @@
+saat_dilimi: Europe/Istanbul
+
+# Optional saved channels. You can also pass an @handle or a UC... channel ID
+# directly to the CLI without adding it here.
+kanallar: {}
+
+# Example:
+# kanallar:
+#   my_channel:
+#     ad: My Channel
+#     handle: "@MyChannelHandle"
+
+# Time buckets use [start, end) and are evaluated in the configured time zone.
+kovalar:
+  - {ad: Gece, bas: 0, bit: 6}
+  - {ad: Sabah, bas: 6, bit: 12}
+  - {ad: Ogle, bas: 12, bit: 17}
+  - {ad: Aksam, bas: 17, bit: 20}
+  - {ad: Prime, bas: 20, bit: 23}
+  - {ad: Gece_gec, bas: 23, bit: 24}
+
+shorts_esik_sn: 180

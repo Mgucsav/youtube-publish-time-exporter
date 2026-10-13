@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "YouTube publish times: previous month",
+      "type": "shell",
+      "command": "python -m yayin_saati --kanal \"${input:channel}\" --gecen-ay",
+      "problemMatcher": []
+    },
+    {
+      "label": "YouTube publish times: custom range",
+      "type": "shell",
+      "command": "python -m yayin_saati --kanal \"${input:channel}\" --bas ${input:start} --bit ${input:end}",
+      "problemMatcher": []
+    },
+    {
+      "label": "YouTube publish times: full history",
+      "type": "shell",
+      "command": "python -m yayin_saati --kanal \"${input:channel}\" --tum",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "channel",
+      "type": "promptString",
+      "description": "Channel alias, @handle, or channel ID",
+      "default": "@YourChannelHandle"
+    },
+    {
+      "id": "start",
+      "type": "promptString",
+      "description": "Start date (YYYY-MM-DD)",
+      "default": "2026-01-01"
+    },
+    {
+      "id": "end",
+      "type": "promptString",
+      "description": "End date (YYYY-MM-DD)",
+      "default": "2026-01-31"
+    }
+  ]
+}
